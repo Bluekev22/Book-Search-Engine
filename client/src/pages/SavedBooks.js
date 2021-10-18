@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
+import { useQuery, useMutation } from "@apollo/react-hooks";
 
 //import { deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
@@ -9,9 +10,9 @@ import { GET_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
 
 const SavedBooks = () => {
-  const [userData, setUserData] = useState({});
+ // const [userData, setUserData] = useState({});
 
-  const userDataLength = Object.keys(userData).length;
+ // const userDataLength = Object.keys(userData).length;
 
   const { loading, data } = useQuery(GET_ME);
   const userData = data?.me || [];
@@ -35,17 +36,17 @@ const SavedBooks = () => {
         throw new Error('something went wrong!');
       }
 
-      const updatedUser = await response.json();
-      setUserData(updatedUser);
+    //  const updatedUser = await response.json();
+     // setUserData(updatedUser);
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {
-      console.error(err);
+      console.error(error);
     }
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 
