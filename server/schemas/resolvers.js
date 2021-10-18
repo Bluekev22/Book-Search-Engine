@@ -37,16 +37,11 @@ const resolvers = {
     },
     saveBook: async (parent, args, context) => {
       if (context.user) {
-        const thought = await Thought.create({
-          thoughtText,
-          thoughtAuthor: context.user.username,
-        });
-
-        const updatedUser =  await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { savedBooks: args.input } },
-          { new: true }
-        );
+         const updatedUser =  await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { savedBooks: args.input } },
+            { new: true }
+          );
     
       return updatedUser;
       }
