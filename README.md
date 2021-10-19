@@ -21,6 +21,8 @@ Create a username, email and password to login. Search for your favorite books a
 ![mighty-tundra-51567 herokuapp com_ (2)](https://user-images.githubusercontent.com/84198162/137822482-880639c3-e5af-4944-93c1-dd6d66c69310.png)
 <hr/>
 
+Press the "Delete this book!" button in the "See Your Books" section to get rid of that book in your collection.
+
 ## Contribution:
 Make pull request.
 ## Questions:
