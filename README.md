@@ -18,7 +18,8 @@ Go to deployed website.
 ## Usage:
 Create a username, email and password to login. Search for your favorite books and then click the "Save this book" button to add to your saved books.
 
-![mighty-tundra-51567 herokuapp com_ (1)](https://user-images.githubusercontent.com/84198162/137822359-12952d7f-f82d-4935-9cc3-8ee0c5dde646.png)
+![mighty-tundra-51567 herokuapp com_ (2)](https://user-images.githubusercontent.com/84198162/137822482-880639c3-e5af-4944-93c1-dd6d66c69310.png)
+<hr/>
 
 ## Contribution:
 Make pull request.
